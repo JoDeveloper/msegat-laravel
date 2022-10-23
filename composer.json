@@ -1,17 +1,17 @@
 {
-    "name": "Jodeveloper/msegat",
+    "name": "jodeveloper/msegat",
     "description": "Msegat SMS Provider",
     "type": "prroject",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Jodeveloper\\Msegat\\": "src/"
+            "jodeveloper\\Msegat\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Jodeveloper8",
-            "email": "Jodeveloper8@gmail.com"
+            "name": "jodeveloper8",
+            "email": "jodeveloper8@gmail.com"
         }
     ],
     "require": {
@@ -21,10 +21,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jodeveloper\\Msegat\\MsegatServiceProvider"
+                "jodeveloper\\Msegat\\MsegatServiceProvider"
             ],
             "aliases": {
-                "Msegat": "Jodeveloper\\Msegat\\Facades\\Msegat"
+                "Msegat": "jodeveloper\\Msegat\\Facades\\Msegat"
             }
         }
     }

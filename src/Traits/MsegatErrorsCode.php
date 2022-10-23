@@ -1,6 +1,6 @@
 <?php
 
-namespace Jodeveloper\Msegat\Traits;
+namespace jodeveloper\Msegat\Traits;
 
 
 trait MsegatErrorsCode

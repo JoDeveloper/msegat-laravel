@@ -108,7 +108,7 @@ class ComposerStaticInit6efdb24a05123c583b9cdedbda7219cd
         ),
         'H' => 
         array (
-            'Jodeveloper\\Msegat\\' => 19,
+            'jodeveloper\\Msegat\\' => 19,
         ),
         'G' => 
         array (
@@ -318,7 +318,7 @@ class ComposerStaticInit6efdb24a05123c583b9cdedbda7219cd
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
         ),
-        'Jodeveloper\\Msegat\\' => 
+        'jodeveloper\\Msegat\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

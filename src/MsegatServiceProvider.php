@@ -1,8 +1,8 @@
 <?php
 
-namespace Jodeveloper\Msegat;
+namespace jodeveloper\Msegat;
 
-use Jodeveloper\Msegat\Services\MsegatFacade;
+use jodeveloper\Msegat\Services\MsegatFacade;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
@@ -29,6 +29,6 @@ class MsegatServiceProvider extends ServiceProvider
         ]);
 
         $loader = AliasLoader::getInstance();
-        $loader->alias('Msegat', 'Jodeveloper\\Msegat\\Facades\\Msegat');
+        $loader->alias('Msegat', 'jodeveloper\\Msegat\\Facades\\Msegat');
     }
 }

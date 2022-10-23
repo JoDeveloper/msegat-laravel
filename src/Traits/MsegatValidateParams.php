@@ -1,8 +1,8 @@
 <?php
 
-namespace Jodeveloper\Msegat\Traits;
+namespace jodeveloper\Msegat\Traits;
 
-use Jodeveloper\Msegat\Exceptions\MsegatException;
+use jodeveloper\Msegat\Exceptions\MsegatException;
 use Illuminate\Support\Arr;
 
 trait MsegatValidateParams

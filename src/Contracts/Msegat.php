@@ -1,6 +1,6 @@
 <?php
 
-namespace Jodeveloper\Msegat\Contracts;
+namespace jodeveloper\Msegat\Contracts;
 
 use Illuminate\Support\Arr;
 

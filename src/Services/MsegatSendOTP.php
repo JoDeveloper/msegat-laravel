@@ -1,10 +1,10 @@
 <?php
 
-namespace Jodeveloper\Msegat\Services;
+namespace jodeveloper\Msegat\Services;
 
-use Jodeveloper\Msegat\Contracts\Msegat;
-use Jodeveloper\Msegat\Interfaces\MsegatOTPInterface;
-use Jodeveloper\Msegat\Traits\MsegatAPIRequest;
+use jodeveloper\Msegat\Contracts\Msegat;
+use jodeveloper\Msegat\Interfaces\MsegatOTPInterface;
+use jodeveloper\Msegat\Traits\MsegatAPIRequest;
 use Illuminate\Http\JsonResponse;
 
 class MsegatSendOTP extends Msegat implements MsegatOTPInterface

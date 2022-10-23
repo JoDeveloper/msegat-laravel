@@ -1,6 +1,6 @@
 <?php
 
-namespace Jodeveloper\Msegat\Interfaces;
+namespace jodeveloper\Msegat\Interfaces;
 
 interface MsegatInquiryInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jodeveloper\Msegat\Traits;
+namespace jodeveloper\Msegat\Traits;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Illuminate\Support\Facades\Http;
