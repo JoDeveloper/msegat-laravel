@@ -1,6 +1,6 @@
 <?php
 
-namespace HossamMonir\Msegat\Traits;
+namespace Jodeveloper\Msegat\Traits;
 
 
 trait MsegatErrorsCode
@@ -41,4 +41,3 @@ trait MsegatErrorsCode
         };
     }
 }
-

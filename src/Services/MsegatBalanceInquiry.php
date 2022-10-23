@@ -1,10 +1,10 @@
 <?php
 
-namespace HossamMonir\Msegat\Services;
+namespace Jodeveloper\Msegat\Services;
 
-use HossamMonir\Msegat\Contracts\Msegat;
-use HossamMonir\Msegat\Interfaces\MsegatInquiryInterface;
-use HossamMonir\Msegat\Traits\MsegatAPIRequest;
+use Jodeveloper\Msegat\Contracts\Msegat;
+use Jodeveloper\Msegat\Interfaces\MsegatInquiryInterface;
+use Jodeveloper\Msegat\Traits\MsegatAPIRequest;
 use Illuminate\Http\JsonResponse;
 
 class MsegatBalanceInquiry extends Msegat implements MsegatInquiryInterface

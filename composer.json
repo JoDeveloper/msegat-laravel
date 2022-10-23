@@ -1,17 +1,17 @@
 {
-    "name": "hossammonir/msegat",
+    "name": "Jodeveloper/msegat",
     "description": "Msegat SMS Provider",
     "type": "prroject",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "HossamMonir\\Msegat\\": "src/"
+            "Jodeveloper\\Msegat\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Hossam Ibrahim",
-            "email": "hossammonir@icloud.com"
+            "name": "Jodeveloper8",
+            "email": "Jodeveloper8@gmail.com"
         }
     ],
     "require": {
@@ -21,10 +21,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "HossamMonir\\Msegat\\MsegatServiceProvider"
+                "Jodeveloper\\Msegat\\MsegatServiceProvider"
             ],
             "aliases": {
-                "Msegat": "HossamMonir\\Msegat\\Facades\\Msegat"
+                "Msegat": "Jodeveloper\\Msegat\\Facades\\Msegat"
             }
         }
     }

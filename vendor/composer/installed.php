@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'hossammonir/msegat',
+        'name' => 'Jodeveloper/msegat',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
         'reference' => 'd9a6f9713065a94a3db09f5e7a3fa71636847161',
@@ -73,7 +73,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'hossammonir/msegat' => array(
+        'Jodeveloper/msegat' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
             'reference' => 'd9a6f9713065a94a3db09f5e7a3fa71636847161',

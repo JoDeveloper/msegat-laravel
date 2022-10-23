@@ -16,13 +16,13 @@ The leading SMS providers in Saudi Arabia, Maximize your reach with reliable del
 ### Installation
 
 ```bash
-composer require hossammonir/msegat
+composer require Jodeveloper/msegat
 ```
 
 <p>Publish repository configurations</p>
 
 ```bash
-php artisan vendor:publish --provider="HossamMonir\Msegat\MsegatServiceProvider"
+php artisan vendor:publish --provider="Jodeveloper\Msegat\MsegatServiceProvider"
 ```
 
 <p>This will publish msegat.php configtations to config/msegat.php</p>
@@ -48,7 +48,7 @@ MSEGAT_API_KEY="Your API Key"
 * Send SMS to multiple recipients with default sender name ID that you fill in .env file.
 
 ```php
-    use HossamMonir\Msegat\Facades\Msegat;
+    use Jodeveloper\Msegat\Facades\Msegat;
 
     Msegat::numbers(['05xxxxxxxx', '05xxxxxxxx'])
             ->message('Hello World')
@@ -59,7 +59,7 @@ MSEGAT_API_KEY="Your API Key"
 * Send SMS to multiple recipients with **custom** sender name ID.
 
 ```php
-    use HossamMonir\Msegat\Facades\Msegat;
+    use Jodeveloper\Msegat\Facades\Msegat;
 
     Msegat::numbers(['05xxxxxxxx', '05xxxxxxxx'])
             ->message('Hello World')
@@ -83,7 +83,7 @@ MSEGAT_API_KEY="Your API Key"
 * Send OTP Message with default sender name ID.
 
 ```php
-    use HossamMonir\Msegat\Facades\Msegat;
+    use Jodeveloper\Msegat\Facades\Msegat;
 
     Msegat::numbers(['05xxxxxxxx'])
             ->sendOTP();
@@ -92,7 +92,7 @@ MSEGAT_API_KEY="Your API Key"
 * If you would like to send free OTP using OTP sender name you can pass 'OTP' to sendOTP method.
 
 ```php
-    use HossamMonir\Msegat\Facades\Msegat;
+    use Jodeveloper\Msegat\Facades\Msegat;
 
     Msegat::numbers(['05xxxxxxxx'])
             ->sendOTP('OTP');
@@ -117,7 +117,7 @@ MSEGAT_API_KEY="Your API Key"
 <p>Caculate message cost with Msegat</p>
 
 ```php
-    use HossamMonir\Msegat\Facades\Msegat;
+    use Jodeveloper\Msegat\Facades\Msegat;
 
     Msegat::numbers(['9665xxxxxxxx', '9665xxxxxxxx', '9665xxxxxxxx'])
         ->message('Hello World')
@@ -138,7 +138,7 @@ MSEGAT_API_KEY="Your API Key"
 <p>Get All Sender Names ID</p>
 
 ```php
-    use HossamMonir\Msegat\Facades\Msegat;
+    use Jodeveloper\Msegat\Facades\Msegat;
 
     Msegat::getSenders();
 ```
@@ -165,7 +165,7 @@ MSEGAT_API_KEY="Your API Key"
 <p>Get Account Balance</p>
 
 ```php
-    use HossamMonir\Msegat\Facades\Msegat;
+    use Jodeveloper\Msegat\Facades\Msegat;
 
     Msegat::getBalance();
 ```

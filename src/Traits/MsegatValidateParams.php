@@ -1,8 +1,8 @@
 <?php
 
-namespace HossamMonir\Msegat\Traits;
+namespace Jodeveloper\Msegat\Traits;
 
-use HossamMonir\Msegat\Exceptions\MsegatException;
+use Jodeveloper\Msegat\Exceptions\MsegatException;
 use Illuminate\Support\Arr;
 
 trait MsegatValidateParams

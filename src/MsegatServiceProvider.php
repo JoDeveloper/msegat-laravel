@@ -1,8 +1,8 @@
 <?php
 
-namespace HossamMonir\Msegat;
+namespace Jodeveloper\Msegat;
 
-use HossamMonir\Msegat\Services\MsegatFacade;
+use Jodeveloper\Msegat\Services\MsegatFacade;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
@@ -29,6 +29,6 @@ class MsegatServiceProvider extends ServiceProvider
         ]);
 
         $loader = AliasLoader::getInstance();
-        $loader->alias('Msegat', 'HossamMonir\\Msegat\\Facades\\Msegat');
+        $loader->alias('Msegat', 'Jodeveloper\\Msegat\\Facades\\Msegat');
     }
 }

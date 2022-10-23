@@ -1,6 +1,6 @@
 <?php
 
-namespace HossamMonir\Msegat\Exceptions;
+namespace Jodeveloper\Msegat\Exceptions;
 
 use Exception;
 use Illuminate\Http\Response;

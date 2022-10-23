@@ -1,6 +1,6 @@
 <?php
 
-namespace HossamMonir\Msegat\Services;
+namespace Jodeveloper\Msegat\Services;
 
 use Illuminate\Http\JsonResponse;
 

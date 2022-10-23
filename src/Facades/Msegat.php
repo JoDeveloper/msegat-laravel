@@ -1,6 +1,6 @@
 <?php
 
-namespace HossamMonir\Msegat\Facades;
+namespace Jodeveloper\Msegat\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
