@@ -5,6 +5,7 @@ namespace jodeveloper\Msegat\Services;
 use jodeveloper\Msegat\Contracts\Msegat;
 use jodeveloper\Msegat\Interfaces\MsegatCalculateInterface;
 use jodeveloper\Msegat\Traits\MsegatAPIRequest;
+use Illuminate\Support\Str;
 use Illuminate\Http\JsonResponse;
 
 class MsegatCalculateMessageCost extends Msegat implements MsegatCalculateInterface
@@ -60,9 +61,9 @@ class MsegatCalculateMessageCost extends Msegat implements MsegatCalculateInterf
     public function calculate(): JsonResponse
     {
         return response()->json([
-            'total_numbers' => (int) str()->before($this->CalculateMessageCostRequest(), ','),
-            'point_cost' => (float) str()->after($this->CalculateMessageCostRequest(), ','),
-            'message_length' => str()->length($this->config['msg']),
+            'total_numbers' => (int) Str::before($this->CalculateMessageCostRequest(), ','),
+            'point_cost' => (float) Str::after($this->CalculateMessageCostRequest(), ','),
+            'message_length' => Str::length($this->config['msg']),
         ]);
     }
 }

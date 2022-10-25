@@ -3,6 +3,7 @@
 namespace jodeveloper\Msegat\Contracts;
 
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 
 abstract class Msegat
 {
@@ -89,7 +90,7 @@ abstract class Msegat
     public function renderNumberForCalculation(array $numbers): string
     {
         $collection = Arr::map($numbers, function ($number) {
-            return str()->replace(['00', '+'], '', $number);
+            return Str::replace(['00', '+'], '', $number);
         });
 
         return collect($collection)->implode(',');

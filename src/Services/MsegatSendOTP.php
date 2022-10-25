@@ -5,6 +5,7 @@ namespace jodeveloper\Msegat\Services;
 use jodeveloper\Msegat\Contracts\Msegat;
 use jodeveloper\Msegat\Interfaces\MsegatOTPInterface;
 use jodeveloper\Msegat\Traits\MsegatAPIRequest;
+use Illuminate\Support\Str;
 use Illuminate\Http\JsonResponse;
 
 class MsegatSendOTP extends Msegat implements MsegatOTPInterface
@@ -45,7 +46,7 @@ class MsegatSendOTP extends Msegat implements MsegatOTPInterface
     {
         $this->pin = rand(1000, 9999);
 
-        $message = str('Pin Code is: ')->append($this->pin);
+        $message = Str::of('Pin Code is: ')->append($this->pin);
 
         $this->config['msg'] = $message;
 
