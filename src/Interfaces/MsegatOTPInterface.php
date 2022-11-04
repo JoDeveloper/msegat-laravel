@@ -4,9 +4,7 @@ namespace jodeveloper\Msegat\Interfaces;
 
 interface MsegatOTPInterface
 {
-    public function numbers(array $numbers);
+    public function numbers(array $numbers,int $otp);
 
     public function send();
-
-    public function setOtp(int $otp);
 }
