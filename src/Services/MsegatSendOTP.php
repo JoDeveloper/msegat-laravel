@@ -12,7 +12,8 @@ class MsegatSendOTP extends Msegat implements MsegatOTPInterface
 {
     use MsegatAPIRequest;
 
-    private string $pin;
+
+    private string $otp;
 
     /**
      * Initialize API Processor Constructor.
@@ -28,11 +29,14 @@ class MsegatSendOTP extends Msegat implements MsegatOTPInterface
      * Bulk of numbers to send SMS.
      *
      * @param  array  $numbers
+     * @param  string $otp
      * @return $this
      */
-    public function numbers(array $numbers): static
+    public function numbers(array $numbers,$otp = null): static
     {
         $this->config['numbers'] = $this->renderNumbers($numbers);
+
+        $this->otp = $otp;
 
         return $this;
     }
@@ -44,9 +48,8 @@ class MsegatSendOTP extends Msegat implements MsegatOTPInterface
      */
     protected function generateOTPMessage(): static
     {
-        $this->pin = rand(1000, 9999);
 
-        $message = Str::of('Pin Code is: ')->append($this->pin);
+        $message = Str::of('Pin Code is : ')->append($this->otp);
 
         $this->config['msg'] = $message;
 
@@ -64,6 +67,6 @@ class MsegatSendOTP extends Msegat implements MsegatOTPInterface
     {
         $this->generateOTPMessage(); // Generate Message
 
-        return response()->json(['response' => $this->SendSMSRequest(), 'pin' => $this->pin]);
+        return response()->json(['response' => $this->SendSMSRequest(), 'pin' => $this->otp]);
     }
 }
