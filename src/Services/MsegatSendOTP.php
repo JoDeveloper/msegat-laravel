@@ -59,7 +59,7 @@ class MsegatSendOTP extends Msegat implements MsegatOTPInterface
      *
      * @return $this
      */
-    protected function setOtp(int $otp) : static
+    public function setOtp(int $otp) : static
     {
         $this->pin = $otp;
 
