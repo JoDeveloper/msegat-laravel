@@ -105,7 +105,7 @@ class MsegatFacade
      */
     public function getBalance(): JsonResponse
     {
-        return (new MsegatBalanceInquiry)->get();
+        return (new MsegatbalanceInquiry)->get();
     }
 
     /**

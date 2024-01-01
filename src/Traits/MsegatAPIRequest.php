@@ -14,13 +14,14 @@ trait MsegatAPIRequest
      *
      * @throws \Throwable
      */
-    public function SendSMSRequest()
+    public function sendSMSRequest()
     {
         // Validate Core API Parameters + Required Parameters for this API
         $this->validateMsegatParams($this->config, ['userName', 'apiKey', 'userSender']);
 
         return Http::baseUrl($this->msegatEndpoint)
             ->withHeaders(['Content-Type' => 'application/json'])
+            ->retry(5, 2000)
             ->withBody($this->getMsegatBody(), 'application/json')
             ->post('sendsms.php')
             ->json();
@@ -31,13 +32,14 @@ trait MsegatAPIRequest
      *
      * @throws \Throwable
      */
-    public function BalanceInquiry()
+    public function balanceInquiry()
     {
         // Validate Core API Parameters + Required Parameters for this API
         $this->validateMsegatParams($this->config, ['userName', 'apiKey']);
 
         return Http::baseUrl($this->msegatEndpoint)
             ->withHeaders(['Content-Type' => 'multipart/form-data; boundary=BOUNDARY'])
+            ->retry(5, 2000)
             ->withBody(new MultipartStream($this->getBoundaryStream(), 'BOUNDARY'), 'multipart/form-data; boundary=BOUNDARY')
             ->post('Credits.php')
             ->json();
@@ -48,12 +50,13 @@ trait MsegatAPIRequest
      *
      * @throws \Throwable
      */
-    public function CalculateMessageCostRequest(): string
+    public function calculateMessageCostRequest(): string
     {
         $this->validateMsegatParams($this->config, ['userName', 'apiKey', 'contacts', 'msg', 'By', 'msgEncoding']);
 
         return Http::baseUrl($this->msegatEndpoint)
             ->withHeaders(['Content-Type' => 'multipart/form-data; boundary=BOUNDARY'])
+            ->retry(5, 2000)
             ->withBody(new MultipartStream($this->getBoundaryStream(), 'BOUNDARY'), 'multipart/form-data; boundary=BOUNDARY')
             ->post('calculateCost.php')
             ->body();
@@ -64,13 +67,14 @@ trait MsegatAPIRequest
      *
      * @throws \Throwable
      */
-    public function SenderNamesInquiryRequest()
+    public function senderNamesInquiryRequest()
     {
         // Validate Core API Parameters + Required Parameters for this API
         $this->validateMsegatParams($this->config, ['userName', 'apiKey']);
 
         return Http::baseUrl($this->msegatEndpoint)
             ->withHeaders(['Content-Type' => 'application/json'])
+            ->retry(5, 2000)
             ->withBody($this->getMsegatBody(), 'application/json')
             ->post('senders.php')
             ->json();

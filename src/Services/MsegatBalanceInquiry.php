@@ -7,7 +7,7 @@ use jodeveloper\Msegat\Interfaces\MsegatInquiryInterface;
 use jodeveloper\Msegat\Traits\MsegatAPIRequest;
 use Illuminate\Http\JsonResponse;
 
-class MsegatBalanceInquiry extends Msegat implements MsegatInquiryInterface
+class MsegatbalanceInquiry extends Msegat implements MsegatInquiryInterface
 {
     use MsegatAPIRequest;
 
@@ -33,7 +33,7 @@ class MsegatBalanceInquiry extends Msegat implements MsegatInquiryInterface
     {
         return response()->json([
             'response' => [
-                'balance' => $this->BalanceInquiry(),
+                'balance' => $this->balanceInquiry(),
             ],
         ]);
     }

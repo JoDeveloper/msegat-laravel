@@ -56,6 +56,6 @@ class MsegatSending extends Msegat implements MsegatSendingInterface
      */
     public function send(): JsonResponse
     {
-        return response()->json(['response' => $this->SendSMSRequest()]);
+        return response()->json(['response' => $this->sendSMSRequest()]);
     }
 }

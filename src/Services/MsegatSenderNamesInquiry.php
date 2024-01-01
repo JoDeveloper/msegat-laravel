@@ -31,6 +31,6 @@ class MsegatSenderNamesInquiry extends Msegat implements MsegatInquiryInterface
      */
     public function get(): JsonResponse
     {
-        return response()->json(['response' => $this->SenderNamesInquiryRequest()]);
+        return response()->json(['response' => $this->senderNamesInquiryRequest()]);
     }
 }
