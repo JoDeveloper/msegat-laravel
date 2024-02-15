@@ -2,6 +2,7 @@
     "name": "jodeveloper/msegat",
     "description": "Msegat SMS Provider",
     "type": "prroject",
+    "version": "1.0.0",
     "license": "MIT",
     "autoload": {
         "psr-4": {
