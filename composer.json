@@ -1,8 +1,12 @@
 {
     "name": "jodeveloper/msegat",
     "description": "Msegat SMS Provider",
-    "type": "prroject",
     "version": "1.0.0",
+    "keywords": [
+        "jodeveloper8",
+        "laravel",
+        "msegat"
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
